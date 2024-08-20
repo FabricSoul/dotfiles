@@ -88,8 +88,7 @@ bindcode $mod+18    workspace  $ws9
 bindcode $mod+19    workspace  $ws10
 
 # switch to workspace with numpad keys
-bindcode $mod+87 workspace $ws1
-bindcode $mod+88 workspace $ws2
+bindcode $mod+87 workspace $ws1 bindcode $mod+88 workspace $ws2
 bindcode $mod+89 workspace $ws3
 bindcode $mod+83 workspace $ws4
 bindcode $mod+84 workspace $ws5
@@ -239,8 +238,8 @@ bindsym $mod+BackSpace split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+g layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+g layout tabbed
 #bindsym $mod+e layout toggle split
 bindsym $mod+t layout toggle 
 
@@ -611,4 +610,4 @@ bindsym $mod+a exec --no-startup-id rofi -show window \
 #bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
-
+bindsym $mod+s exec flameshot gui

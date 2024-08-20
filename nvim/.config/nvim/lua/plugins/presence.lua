@@ -1,6 +1,6 @@
 return {
   {
     "andweeb/presence.nvim",
-    lazy = false,
+    -- very_lazy = true,
   },
 }
