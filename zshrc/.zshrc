@@ -150,3 +150,34 @@ source /etc/profile.d/google-cloud-cli.sh
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export PATH=$PATH:(go env GOPATH)/bin
+
+alias air='$(go env GOPATH)/bin/air'
+alias templ='$(go env GOPATH)/bin/templ'
+alias energy='$(go env GOPATH)/bin/energy'
+
+# pnpm
+export PNPM_HOME="/home/fabric/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${ANDROID_HOME}/tools:${PATH}
+export PATH=${ANDROID_HOME}/emulator:${PATH}
+export PATH=${ANDROID_HOME}/platform-tools:${PATH}
+export WEBKIT_DISABLE_DMABUF_RENDERER=1
+
+set -o vi
+export LD_LIBRARY_PATH=~/.local/share/cef
+export ENERGY_HOME=/home/fabric/cvim/energy/EnergyFramework
+export UPX_HOME=/home/fabric/cvim/energy/upx
+export PATH=$PATH:$UPX_HOME
+
+# Turso
+export PATH="$PATH:/home/fabric/.turso"

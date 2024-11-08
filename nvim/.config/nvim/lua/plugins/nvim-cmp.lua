@@ -45,6 +45,9 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "path" },
+        { name = "snippets" },
+        { name = "git" },
+        { name = "copilot" },
       }, {
         { name = "buffer" },
       }),
