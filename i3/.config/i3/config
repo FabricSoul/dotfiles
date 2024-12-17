@@ -314,18 +314,21 @@ set $ws10 10
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
+# workspace $ws1 output HDMI-1
+# workspace $ws2 output HDMI-1
+# workspace $ws3 output HDMI-1
+# workspace $ws4 output HDMI-1
+# workspace $ws5 output HDMI-1
+# workspace $ws6 output DP-4
+# workspace $ws7 output DP-4
+# workspace $ws8 output DP-4
+# workspace $ws9 output DP-4
+# workspace $ws10 output DP-4
 
 # bind program to workspace and focus to them on startup:
-#assign [class="Xfce4-terminal"] $ws1
-#assign [class="(?i)firefox"] $ws2
-#assign [class="Thunar"] $ws3
-#assign [class="thunderbird"] $ws4
-#assign [class="TelegramDesktop"] $ws5
+assign [class="discord"] $ws6
+assign [class="kitty"] $ws7
+assign [class="(?i)firefox"] $ws8
 
 # automatic set focus new window if it opens on another workspace than the current:
 #for_window [class=Xfce4-terminal] focus

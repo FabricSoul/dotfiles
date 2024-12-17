@@ -15,7 +15,8 @@ return {
     opts = {
       -- configuration goes here
       ---@type lc.lang
-      lang = "rust",
+      -- lang = "rust",
+      lang = "golang",
     },
   },
 }

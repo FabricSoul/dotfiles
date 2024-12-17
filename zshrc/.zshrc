@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/fabric/.zsh/completions:"* ]]; then export FPATH="/home/fabric/.zsh/completions:$FPATH"; fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -150,11 +152,12 @@ source /etc/profile.d/google-cloud-cli.sh
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export PATH=$PATH:(go env GOPATH)/bin
 
-alias air='$(go env GOPATH)/bin/air'
-alias templ='$(go env GOPATH)/bin/templ'
-alias energy='$(go env GOPATH)/bin/energy'
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+# alias air='$(go env GOPATH)/bin/air'
+# alias templ='$(go env GOPATH)/bin/templ'
+# alias energy='$(go env GOPATH)/bin/energy'
 
 # pnpm
 export PNPM_HOME="/home/fabric/.local/share/pnpm"
@@ -181,3 +184,6 @@ export PATH=$PATH:$UPX_HOME
 
 # Turso
 export PATH="$PATH:/home/fabric/.turso"
+
+. "$HOME/.local/bin/env"
+. "/home/fabric/.deno/env"
